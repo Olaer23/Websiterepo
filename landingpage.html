@@ -1,32 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>SneakPeek</title>
-	<link rel="style" href="stylelandingpage.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>SneakPeek</title>
+      <link rel="stylesheet" href="style1.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>
-	<div class="header">
-		<h2>SneakPeek</h2>
-	</div>
+      <div class="wrapper">
+            <header>
 
-	<nav>
-		<div class="nav-wrapper">
-			<div class="container">
-				<ul>
-					<li><a href="#">Home</li>
-					<li><a href="#">Nike</li>
-					<li><a href="#">Adidas</li>
-					<li><a href="#">Shop</li>	
-				</ul>
-			</div>	
-		</div>
-	</nav>
-	<div class="container">
-		<div class="Box Black"></div>
-		<div class="Box Grey"></div>
-		<div class="Box Black"></div>
-		<div class="Box Grey"></div>
-	</div>
+                  <nav>
+
+                        <div class="menu-icon">
+                              <i class="bar"></i>
+                        </div>
+
+                        <div class="logo">
+                              <img src="Logo.jpg" style="width: 50%; height: 50%">
+                        </div>
+
+                        <div class="menu">
+                              <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Nike</a></li>
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Shop</a></li>
+                              </ul>
+                        </div>
+                  </nav>
+
+            </header>
+
+            <div class="content">
+                  <p>
+                        SneakerCon
+                  </p>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+
+
+      </script>
+
 </body>
 </html>
